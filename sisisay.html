@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isay's Pledge</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .pledge-box {
+      background: #ffffff;
+      border: 2px solid #009579;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 500px;
+      margin: 40px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .pledge-box h2 {
+      margin-top: 0;
+      color: #009579;
+      text-align: center;
+    }
+
+    .pledge-box p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .pledge-box ul {
+      list-style: disc inside;
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+
+    .pledge-box li {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 0 auto 20px;
+      padding: 8px 14px;
+      background: #009579;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-btn:hover {
+      background: #007e66;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pledge-box">
+    <h2>Isay's Pledge</h2>
+    <p><strong>Target Amount:</strong> ₱<span id="target-amount">0</span></p>
+    <p><strong>Amount Given:</strong> ₱<span id="amount-given">0</span></p>
+    <p><strong>Remaining Balance:</strong> ₱<span id="balance">0</span></p>
+
+    <h3>Contribution History</h3>
+    <ul id="contribution-list"></ul>
+
+    <a href="index.html" class="back-btn">← Back</a>
+  </div>
+
+  <script>
+    const Data = {
+      target: 5000,
+      contributions: [
+        
+      ]
+    };
+
+    const target = Data.target;
+    const totalGiven = Data.contributions.reduce((sum, entry) => sum + entry.amount, 0);
+    const balance = target - totalGiven;
+
+    document.getElementById("target-amount").textContent = target;
+    document.getElementById("amount-given").textContent = totalGiven;
+    document.getElementById("balance").textContent = balance;
+
+    const list = document.getElementById("contribution-list");
+    Data.contributions.forEach(entry => {
+      const li = document.createElement("li");
+      li.textContent = `₱${entry.amount} — ${entry.date}`;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

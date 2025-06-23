@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Code by: www.codeinfoweb.com -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anniversary</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Box icons cdn link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <header class="site-header">
+  <h1>Anniversary Pledges!</h1>
+  <p>This will help you track your pledges to our anniversary</p>
+</header>
+
+  </head>
+  <body>
+
+<div class="tab-buttons">
+  <button class="tab-btn active" onclick="showTab('summary')">Summary</button>
+  <button class="tab-btn" onclick="showTab('history')">Piggy Bank</button>
+  <button class="tab-btn" onclick="showTab('reports')">Lechon</button>
+</div>
+
+<div id="summary" class="tab-content">
+   <div class="progress-wrapper">
+
+<div class="bar-container" onclick="handleClick('Lady')">
+  <p>Lady</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('RJ')">
+  <p>RJ</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Rodriguez')">
+  <p>Rodriguez</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Bro. Marnel')">
+  <p>Bro. Marnel</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Shem')">
+  <p>Shem</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Lerios')">
+  <p>Lerios</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Bro. Freddy')">
+  <p>Bro. Freddy</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Bro. Garry')">
+  <p>Bro. Garry</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Melissa')">
+  <p>Melissa</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Justin')">
+  <p>Justin</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Bro. Jayvee')">
+  <p>Bro. Jayvee</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Sis. Isay')">
+  <p>Sis. Isay</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Flores')">
+  <p>Flores</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('JL')">
+  <p>JL</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Sis. Vergie')">
+  <p>Sis. Vergie</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+<div class="bar-container" onclick="handleClick('Sis. Joan')">
+  <p>Sis. Joan</p>
+  <div class="progress">
+    <div class="progress__fill"></div>
+    <span class="progress__text">0%</span>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+<div id="history" class="tab-content" style="display:none;">
+  <div style="text-align: center;">
+  <img src="piggy.jpg" alt="Piggy Bank" style="max-width: 50%; height: auto; border-radius: 5px;">
+</div>
+  <div class="money-box">
+  <div class="money-header">
+    🐷 Money in the Piggy Bank
+  </div>
+  <div class="money-amount">
+    ₱5,100
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div id="reports" class="tab-content" style="display:none;">
+    <div style="text-align: center;">
+  <img src="roastedpig.jpg" alt="Piggy Bank" style="max-width: 75%; height: auto; border-radius: 5px;">
+  <div class="lechon-box">
+  <div class="lechon-title">🍖 Lechon Contributions</div>
+  <ul class="lechon-list">
+    <li><strong>Bro. Marnel with Flores</strong> — 1 Lechon</li>
+    <li><strong>Bro. Jayvee</strong> — 1 Lechon</li>
+  </ul>
+</div>
+
+</div>
+</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

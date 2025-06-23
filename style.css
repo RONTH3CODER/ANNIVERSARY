@@ -1,0 +1,189 @@
+.progress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: #d8e3e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress__fill {
+  width: 0%;
+  height: 100%;
+  background: #009579;
+  transition: all 0.3s ease-in-out;
+}
+
+.progress__text {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 14px;
+  color: #009579;
+}
+
+.progress-wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bar-container {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bar-container p {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.bar-container:hover {
+  transform: scale(1.02);
+  border-color: #009579;
+  box-shadow: 0 6px 18px rgba(0, 149, 121, 0.2);
+  background-color: #f9fefc;
+}
+
+.bar-container p {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.site-header {
+  text-align: center;
+  padding: 30px 20px 10px;
+  background-color: #009579;
+  color: white;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.site-header p {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: 2px solid #009579;
+  background-color: white;
+  color: #009579;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background-color: #009579;
+  color: white;
+}
+
+.tab-content {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.money-box {
+  background-color: #fff;
+  border: 2px solid #009579;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 8px 16px rgba(0, 149, 121, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.money-box:hover {
+  transform: scale(1.02);
+}
+
+.money-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: #009579;
+  margin-bottom: 10px;
+}
+
+.money-amount {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.lechon-box {
+  background: #e7f8f4;
+  border: 2px solid #009579;
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 30px auto;
+  box-shadow: 0 6px 12px rgba(0, 149, 121, 0.1);
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lechon-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #009579;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.lechon-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.lechon-list li {
+  margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.lechon-list li::before {
+  content: "🐷";
+  position: absolute;
+  left: 0;
+}
