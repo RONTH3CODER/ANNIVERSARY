@@ -76,14 +76,14 @@
   </div>
 
   <script>
-    const ladyData = {
+    const Data = {
       target: 1000,
       contributions: [
       ]
     };
 
-    const target = ladyData.target;
-    const totalGiven = ladyData.contributions.reduce((sum, entry) => sum + entry.amount, 0);
+    const target = Data.target;
+    const totalGiven = Data.contributions.reduce((sum, entry) => sum + entry.amount, 0);
     const balance = target - totalGiven;
 
     document.getElementById("target-amount").textContent = target;
@@ -91,7 +91,7 @@
     document.getElementById("balance").textContent = balance;
 
     const list = document.getElementById("contribution-list");
-    ladyData.contributions.forEach(entry => {
+    Data.contributions.forEach(entry => {
       const li = document.createElement("li");
       li.textContent = `₱${entry.amount} — ${entry.date}`;
       list.appendChild(li);
